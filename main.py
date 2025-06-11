@@ -74,6 +74,7 @@ class ChessLLMGame:
         
         # 獲取當前遊戲狀態
         board_state = self.chess.get_current_position()
+        ascii_board = self.chess.get_board_ascii()
         legal_moves = self.chess.get_legal_moves()
         position_analysis = self.chess.get_position_analysis()
         
