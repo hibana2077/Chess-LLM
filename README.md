@@ -4,7 +4,7 @@ A project that uses the OpenRouter API to allow two different LLM models to play
 
 ## Gallery
 
-### llama-4-maverick vs. llama-3.3-70b-instruct
+### llama-4-maverick(White) vs. llama-3.3-70b-instruct(Black)
 
 ![llama-4-maverick vs. llama-3.3-70b-instruct](https://images.chesscomfiles.com/uploads/game-gifs/90px/green/neo/0/cc/0/0/bUMhVGd2MEtic1RKbEI5MGZBMFRlZ0tCdks1UXNKVEtkRVpSSlQ4OUUyOTBBMVF6ZmV6UWdoM1ZlZ1JKQ0pRemNWS0RKUjdSVEpSSjFVMDcyWjdaVTFaUjFKUktWTTZTSlNLQ1NKekphZUR1TXVKMHVCQ0pCSzBVZUNVREsyP1YyS1ZOS1JKUkMwUjBweDQhb3dORndFRk5udk5GZ29GTmhnMDFFTU5GZ24hOW9wRk54RjkhcG8hMm9FMlVuZzEhRURVTWdwWVFERU5GcHdNRXduRjNuZVFJdkVJQUVNWEhNVUh6VTIzTmVuTjNudVdHaXl6cmtyQXJ1QjNOQnVORnVuRj8yfSE_bnU_IXV0ITl0QTk4QUg4WkhHWjhHejg3ekk3WUlIWTV5RzU2R082Wk9XWjhXfjgxNDkxOUhROTFRWDE5WFE5OFFIODdIUDcwUFgwMVhQMVRQWFQyWFAyVVBIVTJIUDJUUEhUS0hJS0NJekNLenJLQ3JBQ0tBdEtTdENTMGpyMDhyejgwQ0owWg,,.gif)
 
