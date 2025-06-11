@@ -1,0 +1,4 @@
+python-chess==1.999
+openai
+python-dotenv
+colorama==0.4.6
