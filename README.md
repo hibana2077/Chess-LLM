@@ -1,83 +1,87 @@
 # Chess-LLM
 
-使用 OpenRouter API 讓兩個不同的 LLM 模型進行西洋棋對弈的專案。
+A project that uses the OpenRouter API to allow two different LLM models to play chess.
 
-## 功能特色
+## Features
 
-- 🤖 支援多種 LLM 模型進行對弈
-- ♟️ 完整的西洋棋規則實作
-- 🧠 記錄每步棋的思考過程
-- 📝 自動生成 PGN 遊戲記錄
-- 🎨 彩色終端介面
-- 📊 局面分析和統計
+- 🤖 Supports multiple LLM models for gameplay
+- ♟️ Complete implementation of chess rules
+- 🧠 Records the reasoning behind each move
+- 📝 Automatically generates PGN game records
+- 🎨 Colorful terminal interface
+- 📊 Board analysis and statistics
 
-## 系統架構
+## System Architecture
 
 ### Chess Core
-- 處理棋盤狀態和移動驗證
-- 遊戲規則實作
-- PGN 匯出功能
+- Handles board state and move validation
+- Implements game rules
+- PGN export functionality
 
 ### LLM Inference Core
-- 與 OpenRouter API 溝通
-- 結構化提示詞生成
-- 思考過程記錄
+- Communicates with the OpenRouter API
+- Generates structured prompts
+- Records reasoning processes
 
 ### Main
-遊戲流程：白棋先行 → 白棋思考 → 白棋移動 → 黑棋思考 → 黑棋移動
+Gameplay flow: White moves first → White thinks → White moves → Black thinks → Black moves
 
-## 安裝步驟
+## Installation Steps
 
-1. 克隆專案：
+1. Clone the project:
+
 ```bash
 git clone <repository-url>
 cd Chess-LLM
 ```
 
-2. 安裝依賴：
+2. Install dependencies:
+
 ```bash
 pip install -r requirements.txt
 ```
 
-3. 設定 API 金鑰：
+3. Configure the API key:
+
 ```bash
 cp .env.example .env
-# 編輯 .env 檔案，填入你的 OpenRouter API 金鑰
+# Edit the .env file and enter your OpenRouter API key
 ```
 
-## 使用方法
+## Usage
 
 ```bash
 python main.py
 ```
 
-## 配置選項
+## Configuration Options
 
-在 `config.py` 中可以調整以下設定：
+In `config.py`, you can adjust the following settings:
 
-- `WHITE_MODEL`: 白棋使用的模型
-- `BLACK_MODEL`: 黑棋使用的模型
-- `MAX_MOVES`: 最大回合數
-- `THINKING_TIMEOUT`: 思考超時時間
+- `WHITE_MODEL`: Model used for White
+- `BLACK_MODEL`: Model used for Black
+- `MAX_MOVES`: Maximum number of moves
+- `THINKING_TIMEOUT`: Thinking timeout duration
 
-## 輸出檔案
+## Output Files
 
-每場遊戲會產生以下檔案：
+Each game generates the following files:
 
-- `game_YYYYMMDD_HHMMSS.pgn`: PGN 格式的遊戲記錄
-- `thinking_logs_YYYYMMDD_HHMMSS.json`: 詳細的思考過程記錄
-- `game_log.txt`: 即時遊戲日誌
+- `game_YYYYMMDD_HHMMSS.pgn`: Game record in PGN format
+- `thinking_logs_YYYYMMDD_HHMMSS.json`: Detailed record of the reasoning process
+- `game_log.txt`: Real-time game log
 
-## 支援的模型
+## Supported Models
 
-透過 OpenRouter 可以使用的模型包括：
-- `anthropic/claude-3.5-sonnet`
-- `openai/gpt-4-turbo`
-- `google/gemini-pro`
-- 等等更多...
+Models available through OpenRouter include:
 
-## 系統需求
+- `meta-llama/llama-4-maverick`
+- `meta-llama/llama-3.3-70b-instruct`
+- `google/gemini-2.5-pro-preview`
+- and many more...
+
+## System Requirements
 
 - Python 3.8+
-- OpenRouter API 金鑰
-- 網路連線
+- OpenRouter API key
+- Internet connection
