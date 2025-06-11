@@ -10,7 +10,14 @@ A project that uses the OpenRouter API to allow two different LLM models to play
 
 ### Claude-3.5-haiku(White) vs. Nova Pro v1(Black)
 
-![](https://images.chesscomfiles.com/uploads/game-gifs/90px/green/vintage/0/cc/0/0/bUMhVGd2NVF2TVFCTTNCTDM5MlU5M1RKMzlKVDkzVEozOUwyOTNKVDM5MlM5M1NNMzlUSjkzSlQzOVRKOTNKVDM5VEo5M0pUMzlUSjkzSlQ,.gif)
+![claude-3.5-haiku vs. nova-pro-v1](https://images.chesscomfiles.com/uploads/game-gifs/90px/green/vintage/0/cc/0/0/bUMhVGd2NVF2TVFCTTNCTDM5MlU5M1RKMzlKVDkzVEozOUwyOTNKVDM5MlM5M1NNMzlUSjkzSlQzOVRKOTNKVDM5VEo5M0pUMzlUSjkzSlQ,.gif)
+
+<!-- ### WHITE_MODEL = "anthropic/claude-3.5-haiku"  # white 
+BLACK_MODEL = "meta-llama/llama-4-maverick" # black -->
+
+### Claude-3.5-haiku(White) vs. llama-4-maverick(Black)
+
+![claude-3.5-haiku vs. llama-4-maverick](https://images.chesscomfiles.com/uploads/game-gifs/90px/green/modern2/0/cc/0/0/bUMwS2d2NVF2S1pSS1UhVkNLUktVPzZaPzFRMDFNVkxNMzgxMzkwIWROMTBOP0xSPzIwODI_ODE_ITEhOTMhPzM5NzA5MzAyMzlSTDkzMjNuRExSRExSTGxCNDhjRDghRFZLQlYyITJic0x1c0p1Sm93SkRmeERvZW5CdHhFb3VFU3VvUzFvZTEhZW8hMTIxbm9aRXB4PyF4RjFub2dub2dvM05oeEV2b2dORUZORU54TnZFTj8hP2FmPyFmOSE5Z3BFbWt0OTJ3RTIxcHdtRXdGMTJGTTIxTVZFU1YzU0p0QkpDM1YxMFYyQ0oyM1lJMzJJQjJWMFpWMlpZMlRZNVQySlMyVFNaVDJaNjI_NVk_MjZTMlRTSlQySkMyP0NKPzNKQzMhWVIhMVJLMSFLSiExQ3QxMkpLMj90Qz8yS0oyOUJ0OTJDbzI_dGw_Mmx-Mj9kTj8yb0MyOU5NOTFNMDEwSkswOUtSOTJXRzI_WFA_MlIwMj8wMWp6Q0o_MzEwMzJHeml5enEyPzBaPzJaWQ,,.gif)
 
 ## Features
 

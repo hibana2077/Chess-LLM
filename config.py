@@ -9,7 +9,7 @@ OPENROUTER_BASE_URL = "https://openrouter.ai/api/v1"
 
 # 模型設定
 WHITE_MODEL = "anthropic/claude-3.5-haiku"  # white 
-BLACK_MODEL = "mistralai/mixtral-8x22b-instruct" # black
+BLACK_MODEL = "meta-llama/llama-4-maverick" # black
 
 # Personality 設定
 WHITE_PERSONALITY = "Aggressive. Focus on attacking strategies and quick victories."
