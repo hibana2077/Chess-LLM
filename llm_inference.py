@@ -3,6 +3,7 @@ import json
 import time
 from typing import Dict, Any, Optional, Tuple
 from datetime import datetime
+from prompt_lib import RESPONSE_FORMAT_THINK, RESPONSE_FORMAT_WITHOUT_THINK
 import config
 
 
@@ -22,6 +23,7 @@ class LLMInferenceCore:
                       legal_moves: list,
                       move_history: list,
                       player_color: str,
+                      personality: str,
                       position_analysis: dict) -> Tuple[str, str]:
         """
         讓 LLM 思考並決定下一步移動
@@ -53,7 +55,7 @@ class LLMInferenceCore:
                 messages=[
                     {
                         "role": "system",
-                        "content": "You are a professional chess master. Please analyze the board position carefully, think about the best move strategy, and respond in JSON format."
+                        "content": f"You are a {personality} professional chess master. respond in JSON format."
                     },
                     {
                         "role": "user",
@@ -109,7 +111,7 @@ class LLMInferenceCore:
                            player_color: str,
                            position_analysis: dict) -> str:
         """建構西洋棋分析提示詞"""
-        
+        response_format = RESPONSE_FORMAT_THINK if config.RESPONSE_WITH_THINKING else RESPONSE_FORMAT_WITHOUT_THINK
         prompt = f"""
 Please analyze the following chess position and choose the best move:
 
@@ -124,22 +126,10 @@ Please analyze the following chess position and choose the best move:
 **Available legal moves:**
 {', '.join(legal_moves)}
 
-**Please respond in the following format (must be valid JSON):**
-```json
-{{
-    "analysis": "Your detailed analysis of the current position, including threats, opportunities, strategic considerations, etc.",
-    "candidate_moves": [
-        {{
-            "move": "UCI format of the move",
-            "evaluation": "Evaluation and reasoning for this move"
-        }}
-    ],
-    "chosen_move": "UCI format of the chosen move",
-    "reasoning": "Main reasons and strategic goals for choosing this move"
-}}
+{response_format}
 ```
 
-Please ensure that the chosen move is within the legal moves list and provide a deep strategic analysis.
+Please ensure that the chosen move is within the legal moves list.
 """
         return prompt
     

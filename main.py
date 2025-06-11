@@ -56,14 +56,15 @@ class ChessLLMGame:
             print(f"  {Fore.RED}將軍!{Style.RESET_ALL}")
         print()
     
-    def play_turn(self, player_color: str, model_name: str) -> bool:
+    def play_turn(self, player_color: str, model_name: str, personality: str) -> bool:
         """
         執行一回合
         
         Args:
             player_color: 玩家顏色 ("White" 或 "Black")
             model_name: 使用的模型名稱
-            
+            personality: 玩家個性
+
         Returns:
             bool: 是否成功執行移動
         """
@@ -85,6 +86,7 @@ class ChessLLMGame:
             legal_moves=legal_moves,
             move_history=self.chess.move_history,
             player_color=player_color,
+            personality=personality,
             position_analysis=position_analysis
         )
         
@@ -120,10 +122,10 @@ class ChessLLMGame:
             
             if current_player == "White":
                 # 白棋回合
-                success = self.play_turn("White", config.WHITE_MODEL)
+                success = self.play_turn("White", config.WHITE_MODEL, config.WHITE_PERSONALITY)
             else:
                 # 黑棋回合
-                success = self.play_turn("Black", config.BLACK_MODEL)
+                success = self.play_turn("Black", config.BLACK_MODEL, config.BLACK_PERSONALITY)
             
             if not success:
                 print(f"{Fore.RED}移動失敗，遊戲結束{Style.RESET_ALL}")
@@ -132,7 +134,7 @@ class ChessLLMGame:
             move_count += 1
             
             # 短暫暫停，讓輸出更易讀
-            time.sleep(1)
+            time.sleep(0.1)
         
         # 遊戲結束
         self.print_game_result()
